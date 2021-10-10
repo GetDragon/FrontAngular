@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b7b78076-cc71-414e-b707-9402bef52e93/resourceGroups/appsvc_windows_centralus_basic/providers/Microsoft.Web/sites/vidanueva",
+    "appService.deploySubpath": "."
+}
