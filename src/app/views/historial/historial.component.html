@@ -1,0 +1,55 @@
+<div class="animated fadeIn">
+    <div class="form-group row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <input type="text" id="input1-group2" name="input1-group2" class="form-control"
+                    placeholder="Que está buscando?">
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Consultar</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="card-columns cols-2">
+        <div class="card">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Fecha registro</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let _ of [].constructor(10); let x = index">
+                        <td>Samppa Nori {{x}}</td>
+                        <td>2012/01/01</td>
+                        <td>Paciente</td>
+                        <td>
+                            <span class="badge badge-success">Activo</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Historial actividades
+                <div class="card-header-actions">
+                    <a href="http://www.chartjs.org">
+                        <small class="text-muted">docs</small>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="chart-wrapper">
+                    <canvas baseChart class="chart" [datasets]="lineChartData" [labels]="lineChartLabels"
+                        [options]="lineChartOptions" [colors]="lineChartColours" [legend]="lineChartLegend"
+                        [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,164 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <input type="text" id="input1-group2" name="input1-group2" class="form-control"
+                            placeholder="Que está buscando?">
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>
+                                Consultar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Simple Table
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th class="col-hide">Gerente</th>
+                                <th class="col-hide">Observaciones</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let _ of [].constructor(10); let x = index">
+                                <td>IPS</td>
+                                <td>IPS Salud Total</td>
+                                <td>Calle 90E # 123 - 45</td>
+                                <td class="col-hide">Carlos Bernal</td>
+                                <td class="col-hide">xxxxxx x xxxx xx xx xx</td>
+                                <td>
+                                    <a class="btn btn-primary" href="#">
+                                        <i class="fa fa-pencil fa-lg"></i>
+                                    </a>
+                                    <a class="btn btn-danger" href="#">
+                                        <i class="fa fa-trash-o fa-lg"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+                        <li class="page-item pr-2"><a class="btn btn-block btn-primary" data-toggle="modal"
+                                (click)="myModal.show()">Nuevo</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Registrar IPS</h4>
+                <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Basic Form</strong> Elements
+                    </div>
+                    <div class="card-body" style="height: 50vh; overflow: auto;">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="text-input">Identificación</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="text-input" name="text-input" class="form-control"
+                                        placeholder="Identificación">
+                                    <span class="help-block">Ingrese su identificación</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="email-input">Email Input</label>
+                                <div class="col-md-9">
+                                    <input type="email" id="email-input" name="email-input" class="form-control"
+                                        placeholder="Enter Email" autocomplete="email">
+                                    <span class="help-block">Please enter your email</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="password-input">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" id="password-input" name="password-input"
+                                        class="form-control" placeholder="Password" autocomplete="current-password">
+                                    <span class="help-block">Please enter a complex password</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="date-input">Date Input</label>
+                                <div class="col-md-9">
+                                    <input class="form-control" id="date-input" type="date" name="date-input"
+                                        placeholder="date">
+                                    <span class="help-block">Please enter a valid date</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="multiple-select">Multiple select</label>
+                                <div class="col-md-9">
+                                    <select id="multiple-select" name="multiple-select" class="form-control" size="5"
+                                        multiple>
+                                        <option value="1">Option #1</option>
+                                        <option value="2">Option #2</option>
+                                        <option value="3">Option #3</option>
+                                        <option value="4">Option #4</option>
+                                        <option value="5">Option #5</option>
+                                        <option value="6">Option #6</option>
+                                        <option value="7">Option #7</option>
+                                        <option value="8">Option #8</option>
+                                        <option value="9">Option #9</option>
+                                        <option value="10">Option #10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="file-input">File input</label>
+                                <div class="col-md-9">
+                                    <input type="file" id="file-input" name="file-input">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File
+                                    input</label>
+                                <div class="col-md-9">
+                                    <input type="file" id="file-multiple-input" name="file-multiple-input" multiple>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Guardar
+                            cambios</button>
+                        <button type="reset" class="btn btn-sm btn-danger" (click)="myModal.hide()"><i
+                                class="fa fa-ban"></i> Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="myModal.hide()">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
